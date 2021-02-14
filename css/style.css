@@ -1,0 +1,384 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+* {
+  font-size: 15;
+  font-family: "Sansita Swashed", cursive;
+  font-weight: 700;
+}
+
+html, body {
+  height: 100%;
+}
+
+button {
+  padding: 1.85vh 2vw;
+  background: black;
+  min-width: 170px;
+  border: 3px solid white;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 15px;
+  font-size: calc(15px + 17 * ((100vw - 320px) / 1600));
+  transition: transform 0.5s ease 0s;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(0.9);
+}
+
+.wrapper {
+  display: flex;
+  position: relative;
+  padding: 20px;
+  min-height: 100%;
+  background: url(img/back_sea.jpg) center/cover;
+}
+
+.controls {
+  flex: 1 1 33.33%;
+  height: inherit;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls button {
+  margin: 30px 0;
+}
+
+.controls button:hover {
+  transform: scale(0.9);
+}
+
+.start_btn {
+  position: relative;
+  bottom: 0;
+  animation: jump 0.8s infinite;
+}
+
+button.start_btn:hover {
+  transform: none;
+}
+
+.buttons_backgrd {
+  height: inherit;
+  min-height: 300px;
+  flex: 1 1 33.33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons_backgrd button {
+  margin: 50px 0;
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 25px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+.game {
+  flex: 1 1 33.33%;
+  height: inherit;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game__complex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 -10px;
+}
+
+.game__complex button {
+  margin: 0 10px;
+}
+
+button.active {
+  border: 3px solid green;
+  color: green;
+  transition: all 0.8s ease 0s;
+  box-shadow: 0 0 50px rgba(0, 128, 0, 0.5);
+}
+
+button.active:hover {
+  transform: none;
+}
+
+.game__txt {
+  text-align: center;
+}
+
+p {
+  font-size: calc(20px + 5 * ((100vw - 320px) / 1600));
+  color: white;
+  text-transform: uppercase;
+  margin: 40px 0;
+  text-shadow: 1px 0 1px #000, 0 1px 1px #000, -1px 0 1px #000, 0 -1px 1px #000;
+}
+
+.game__grid {
+  display: flex;
+  flex-wrap: wrap;
+  opacity: 0.8;
+}
+
+.progressbar {
+  margin-top: 40px;
+  height: 25px;
+  width: 20vw;
+  min-width: 280px;
+  border-radius: 30px;
+}
+
+.progressbar::-webkit-progress-bar {
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.progressbar::-webkit-progress-value {
+  background: rgba(9, 104, 9, 0.8);
+  border-radius: 30px;
+}
+
+.progressbar::-moz-progress-bar {
+  background: rgba(9, 104, 9, 0.8);
+  border-radius: 30px;
+}
+
+.result, .info {
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  min-height: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  transition: all 0.8s ease 0s;
+}
+@media (max-width: 960px) {
+  .result, .info {
+    justify-content: flex-start;
+    padding: 50px 0 0;
+  }
+}
+
+.info p, .result p {
+  color: black;
+  text-transform: none;
+  font-size: calc(15px + 10 * ((100vw - 320px) / 1600));
+  text-shadow: 1px 0 1px #fff, 0 1px 1px #fff, -1px 0 1px #fff, 0 -1px 1px #fff;
+}
+
+.result p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: calc(20px + 10 * ((100vw - 320px) / 1600));
+}
+
+.info__imgs {
+  display: flex;
+  align-items: center;
+  margin: 0 -20px;
+}
+@media (max-width: 960px) {
+  .info__imgs {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 960px) {
+  .info__arr {
+    transform: scale(0.7) rotate(90deg);
+  }
+}
+.info__img {
+  width: 17.8vw;
+  margin: 20px;
+}
+
+.info button:hover {
+  transform: none;
+}
+
+.result img {
+  width: 30vw;
+  height: auto;
+  border-radius: 35px;
+  background: black;
+  border: 2px solid black;
+  box-shadow: 0 0 20px black;
+}
+
+.result__loose, .result__win, .info__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 150px;
+  border: 7px solid black;
+  background: rgba(255, 255, 255, 0.8);
+  max-width: 50%;
+}
+
+.info__content {
+  padding: 20px 70px;
+}
+
+.play_again, .btn_open_game {
+  margin-top: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  min-width: 0px;
+}
+
+.play_again:hover {
+  transform: none;
+}
+
+button img {
+  filter: brightness(0) invert(1);
+}
+
+button.btn_play {
+  position: absolute;
+  top: 6.48%;
+  left: 2.6%;
+  min-width: 0px;
+  background: none;
+  border: none;
+  padding: 0px;
+}
+@media (max-width: 500px) {
+  button.btn_play {
+    left: 20px;
+    top: 20px;
+  }
+}
+
+.btn_play:hover {
+  transform: none;
+}
+
+@media (max-width: 960px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .game__complex {
+    flex-direction: column;
+    order: 3;
+  }
+
+  .game__txt {
+    order: 1;
+  }
+
+  .game__grid {
+    order: 2;
+    margin-bottom: 20px;
+  }
+
+  .game__complex button {
+    margin-bottom: 15px;
+  }
+
+  .buttons_backgrd button {
+    margin: 20px 0;
+  }
+
+  body {
+    overflow: auto;
+  }
+}
+video {
+  display: none;
+}

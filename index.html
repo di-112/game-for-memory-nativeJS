@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width">
+   <link rel="stylesheet" href="css/style.css">
+   <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap" rel="stylesheet">
+   <link rel="shortcut icon" href="css/img/icon.png">
+   <title>Game_for_memory</title>
+</head>
+<body>
+   <div class="wrapper"> 
+      <div class="info">
+         <div class="info__content">
+            <p>Перед вами будет представлено игровое поле из четного количества квадратов, за каждым из которых скрыт определленый цвет. Кликнув по квадрату, вы увидите какой цвет за ним закреплен. Кликнув по следующему квадрату воможны 2 сценария: 1) выбранные квадраты одного цвета и они останутся открытыми 2) выбранные квадраты разного цвета и через пол секунды они закроются. Ваша задача найти за определенный промежуток времени все пары квадратов по их цветам. Удачи!!!</p>
+            <div class="info__imgs">
+               <img class="info__img" src="css/img/before.png" alt="">
+               <img class="info__arr"src="css/img/arr.png" alt="" width="70px">
+               <img class="info__img" src="css/img/after.png" alt="">
+            </div>
+            <button class="btn_open_game">ok</button>
+         </div>
+      </div>
+      <button class="btn_play">
+         <img src="css/img/sound-off.svg" alt="volume">
+      </button>
+      <div class="controls">
+         <button class="start_btn">start</button>
+         <button class="reset_btn">reset</button>
+      </div>
+      <div class="game">
+         <div class="game__complex">
+            <button class="easy active">easy</button>
+            <button class="middle">middle</button>
+            <button class="hard">hard</button>
+         </div>  
+         <div class="game__txt">
+            <p class="time">time: </p>
+         </div>
+         <div class="game__grid">
+            <div style="display: none"></div>
+         </div>
+         <progress class="progressbar" value="0" max="100"></progress>
+      </div>
+      <div class="buttons_backgrd">
+         <p>Background:</p>
+         <button class="rain">rain</button>
+         <button class="sea active">sea</button>
+         <button class="fire">fire</button>
+      </div>
+      <div class="result" style="display: none;">  
+           <div class="result__win">
+            <div class="rsult__info">  
+               <p>Win!!!</p>
+               <p class="result__time">time: </p>
+            </div>
+            <img src="" alt="winner">
+            <button class="play_again">play again</button>
+         </div>
+         <div class="result__loose">
+            <p>Loose(((</p>
+            <img src="" alt="winner">
+            <button class="play_again">play again</button>
+          </div>
+      </div>
+   </div>
+   <script src="js/game.js"></script>
+   <script src="js/background.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+.game {
+   flex: 1 1 33.33%;
+   height: inherit;
+   min-height: 500px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;  
+}
+
+.game__complex{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   margin: 0 -10px;
+}
+
+.game__complex button{
+  margin: 0 10px;
+}
+
+button.active{
+   border: 3px solid green;
+   color: green;
+   transition: all 0.8s ease 0s;
+   box-shadow: 0 0 50px rgba(0,128,0,0.5);
+}
+
+button.active:hover{
+   transform: none;
+}
+
+.game__txt{
+   text-align: center;
+}
+
+p{
+   @include adaptiv-font(25, 20);
+   color: white;
+   text-transform: uppercase;
+   margin: 40px 0;
+   text-shadow: 1px 0 1px #000, 
+   0 1px 1px #000, 
+   -1px 0 1px #000, 
+   0 -1px 1px #000;
+}
+
+.game__grid{
+   display: flex; 
+   flex-wrap: wrap;
+   opacity: 0.8;
+}
+
+.progressbar {
+   margin-top: 40px;
+   height: 25px;
+   width: 20vw;
+   min-width: 280px;
+   border-radius: 30px;
+ }
+ 
+ .progressbar::-webkit-progress-bar {
+   border-radius: 30px;
+   background: rgba(255, 255, 255, 0.5);
+ }
+ 
+ .progressbar::-webkit-progress-value {
+   background: rgba(9, 104, 9, 0.8);
+   border-radius: 30px;
+ }
+ 
+ .progressbar::-moz-progress-bar {
+   background: rgba(9, 104, 9, 0.8);
+   border-radius: 30px;
+ }
+

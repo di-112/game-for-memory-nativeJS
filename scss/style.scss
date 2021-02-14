@@ -1,0 +1,82 @@
+@import 'nule.scss';
+@import 'mixins.scss';
+
+*{
+   font-size: 15;
+   font-family: 'Sansita Swashed', cursive;
+   font-weight: 700;
+}
+
+
+html, body{
+   height: 100%; 
+}
+
+button{
+   padding: 1.85vh 2vw;
+   background: black;
+   min-width: 170px;
+   border: 3px solid white;
+   color: white;
+   text-transform: uppercase;
+   border-radius: 15px;
+   @include adaptiv-font(32,15);
+   transition: transform 0.5s ease 0s;
+}
+
+button:hover{
+   cursor: pointer;
+   transform: scale(0.9);
+}
+
+
+.wrapper{
+   display: flex;
+   position: relative;
+   padding: 20px;
+   min-height: 100%;
+   background: url(img/back_sea.jpg) center/cover;
+}
+
+@import "btn-control_btn-backgrd.scss";
+
+@import 'game_grid.scss';
+
+@import "popaps.scss";
+
+button img{
+   filter: brightness(0) invert(1);
+}
+
+button.btn_play{
+   position: absolute;
+   top: 6.48%;
+   left: 2.6%;
+   @media (max-width:500px) {
+      left: 20px;
+      top: 20px;
+   }
+   min-width: 0px;
+   background: none;
+   border: none;
+   padding: 0px;
+}
+
+.btn_play:hover{
+   transform: none;
+}
+
+
+ @media (max-width: 960px){
+   .wrapper{flex-direction: column;}
+   .game__complex{flex-direction: column; order: 3;}
+   .game__txt{ order: 1;}
+   .game__grid{ order: 2; margin-bottom: 20px;}
+   .game__complex button{margin-bottom: 15px;}
+   .buttons_backgrd button{ margin: 20px 0;}
+    body{  overflow: auto ; }
+}
+
+video{
+   display: none;
+}
